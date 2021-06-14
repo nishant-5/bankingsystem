@@ -2,7 +2,7 @@
 <html>
 <head>
 <title> Transfer</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assests/css/style.css">
 <style>
 input[type=text], select {
   width: 100%;
@@ -78,25 +78,24 @@ div {
 <body>
 
 <h1>PAYMENT</h1>
-   <h2>Name: Sujith</h2>
-   <h4>Current Balance: <span id="myAccountBalance">17000</span></h4>
+   <h2>Name: Nishant</h2>
+   <h4>Current Balance: <span id="myAccountBalance">95000</span></h4>
 <p>Select the user you want to transfer and the amount.</p>
 <div>
   <form onsubmit="return display()">
     <label for="names">USER : </label>
     <select id="names" name="names">
       <option value="User Name...">User Name...</option>
-      <option value="prakash">Vaheed</option>
-      <option value="mahesh">Rajshri</option>
-      <option value="varshith">Hari</option>
-      <option value="yaswanth">Ruchitha</option>
-      <option value="sunil">Srirag</option>
-      <option value="vamshi">Rohan</option>
-      <option value="sailesh">Sujith</option>
-      <option value="vallabh">Varsha</option>
-      <option value="teja">Raj</option>
-      <option value="owner">Phani</option>
-      <option value="point">Jon</option>
+      <option value="suresh">Vaheed</option>
+      <option value="Ramesh">Ramesh</option>
+      <option value="Vamsi">Vamsi</option>
+      <option value="Lohith">Lohith</option>
+      <option value="Pawan">Pawan</option>
+      <option value="Kiran">Kiran</option>
+      <option value="Syam">Syam</option>
+      <option value="Hemanth">Hemanth</option>
+      <option value="Kirana Store">Kirana Store</option>
+      <option value="Noodles Centre">Noodles centre</option>
     </select>
     <label for="amount">AMOUNT : </label>
     <input type="text" id="amount" name="amount" placeholder="Enter your amount...">
@@ -110,7 +109,7 @@ div {
       var getamount=document.getElementById("amount").value;
      
       var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - getamount;
-      if(getamount>17000)
+      if(getamount>95000)
       {
       alert("Insufficient Balance.");
       }
@@ -121,6 +120,6 @@ div {
       return false;
     }
   </script>
-<a href="https://chavali19.github.io/my-project/endpage.html" class="button">Exit</a>
+<a href="https://nishant-5.github.io/bankingsystem/end.html" class="button">Exit</a>
     </body>
 </html>
