@@ -1,120 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Transfer</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="assets/css/customer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 <style>
 input[type=text], select {
-  width: 25%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color:blue;
 }
 
 h1 {
-  color: #abacde;
-  font-family: Times New Roman;
+  color: blue;
+  font-family: Georgia;
   font-size: 40px;
   padding-top: 40px;
   margin-left: 30px;
 }
-h2 {
-  color: #fa484b;
-  font-size: 20px;
-}
-  h4 {
-  color: #fa484b;
-    font-size: 20px;
-}
+
 body {
   background-image: url("https://nishant-5.github.io/bankingsystem/bank.jpg");
   background-size: 1600px 720px;
 }
 
- #submit{
-   /* Fill the attributes and values */
-   color: #FFFFFF;
-   background-color: green;
-   padding: 5px;
-   width:10%;
-   font-weight: bold;
-   border-radius: 1px;
-  }
-  #result{
-   /* Fill the attributes and values */
-   color: #FF6347;
-   font-size: 20px;
-   
-  }
-  .button {
-   background-color: #fa484b;
-   border-radius: 5px;
-   color: white;
-   padding: 14px 40px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 20px;
-   margin-top: 20px;
-   margin-left: 80px;
-   border: 2px solid black;
-   cursor: pointer;
+label{
+  color:white;
 }
-  
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: skyblue;
+  border: 1px solid blue;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  width: 20%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 8px 0;
+}
 p{
-  color: white;
-  font-family: Times New Roman;
+  color: blue;
+  font-family: Georgia;
   font-size: 18px;
   margin-left: 20px;
 }
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #7852ff;
   padding: 20px;
+}
+.result{
+   color: white;
+   font-size: 20px;
+   
+  }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: skyblue;
+  color: white;
+  text-align: center;
 }
 </style>
 </head>
 <body>
-
+     <!-- navbar starts here  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<a class="navbar-brand">
+      <img class="img-responsive" width="60px" height="" src="RPSN.jpg"></a>
+        <a class="navbar-brand" href="./index.html">RPSN BANK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <!-- navbar ends here  -->
 <h1>PAYMENT</h1>
-   <h2>Name: Nishant</h2>
-   <h4>Current Balance: <span id="myAccountBalance">95000</span></h4>
+<hr>
 <p>Select the user you want to transfer and the amount.</p>
 <div>
-  <form onsubmit="return display()">
+  <form  onsubmit="return display()">
     <label for="names">USER : </label>
     <select id="names" name="names">
-      <option value="User Name...">User Name...</option>
-     <option value="Vaheed">Vaheed</option>
-      <option value="Rajshri">Rajshri</option>
-      <option value="Hari">Hari</option>
-      <option value="Ruchitha">Ruchitha</option>
-      <option value="Srirag">Srirag</option>
-      <option value="Rohan">Rohan</option>
-      <option value="Sujith">Sujith</option>
-      <option value="Varsha">Varsha</option>
-      <option value="Raj">Raj</option>
-      <option value="Phani">Phani</option>
-      <option value="Jon">Jon</option>
+      <option value="srirag">Srirag</option>
+      <option value="sujith">Sujith</option>
+      <option value="nishanth">Nishanth</option>
+      <option value="hari">Hari</option>
+      <option value="ajay">Ajay</option>
+      <option value="phani">Phani</option>
+      <option value="sohel">Sohel</option>
+      <option value="sriman">Sriman</option>
+      <option value="tejesh">Tejesh</option>
+      <option value="zomato">Zomato</option>
+      <option value="apollo">Apollo</option>
     </select>
-    
     <label for="amount">AMOUNT : </label>
     <input type="text" id="amount" name="amount" placeholder="Enter your amount...">
     <p><input type="submit" id="submit" name="submit" value="Pay Now" /></p>
     <div id="result"></div>
-  </form>
-</div>
-  <script>
-    function display()
-    {
+    </form>
+    </div>
+    <script>
+    function display(){
       var getamount=document.getElementById("amount").value;
      
       var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - getamount;
-      if(getamount>95000)
-      {
+      if(getamount>8600){
       alert("Insufficient Balance.");
       }
       else{
@@ -124,6 +134,10 @@ div {
       return false;
     }
   </script>
-<a href="https://nishant-5.github.io/bankingsystem/end.html" class="button">Exit</a>
-    </body>
+  <a href="https://nishant-5.github.io/bankingsystem/end.html" class="button">Exit</a>
+	
+<div class="footer">
+  <p style="color:white">@Copyright RPSN BANK - YOUR BANK YOUR WAY OF LIFE </p>
+</div>
+</body>
 </html>
